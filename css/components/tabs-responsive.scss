@@ -18,8 +18,8 @@
 	transition: background-color $duration $easing, color $duration $easing;
 }
 .fr-tabsresp--is-ready .fr-tabsresp__tab {
-	display: inline-block;
 	border-radius: 0.25em 0.25em 0 0; /* 4px */
+	display: inline-block;
 }
 .fonts-loaded .fr-tabsresp__tab {
 	font-family: $web-font-sans;
