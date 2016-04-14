@@ -6,11 +6,9 @@
 //	Tabs
 //-----------------------------------
 
-.fr-tabs--is-ready .fr-tabs__tab {
+.fr-tabsresp--is-ready .fr-tabsresp__tab, .fr-tabsresp--is-ready .fr-tabsresp__head {
 	background-color: mix(#000, $yellow, 5%);
-	border-radius: 0.25em 0.25em 0 0; /* 4px */
 	color: $dark-grey;
-	display: inline-block;
 	font-family: $sans-font;
 	font-size: 1em; /* 16px */
 	line-height: 1.25; /* 20px from 16 */
@@ -19,17 +17,21 @@
 	text-transform: uppercase;
 	transition: background-color $duration $easing, color $duration $easing;
 }
-.fonts-loaded .fr-tabs__tab {
+.fr-tabsresp--is-ready .fr-tabsresp__tab {
+	display: inline-block;
+	border-radius: 0.25em 0.25em 0 0; /* 4px */
+}
+.fonts-loaded .fr-tabsresp__tab {
 	font-family: $web-font-sans;
 }
 
 // Active
-.fr-tabs__tab[tabindex="0"] {
+.fr-tabsresp__tab[tabindex="0"], .fr-tabsresp__head[aria-selected="true"] {
 	background-color: $yellow;
 }
 
 // Hover
-.fr-tabs__tab:not([tabindex="0"]):hover {
+.fr-tabsresp__tab:not([tabindex="0"]):hover, .fr-tabsresp__hea:not([aria-selected="true"]):hover {
 	background-color: mix(#fff, $dark-grey, 20%);
 	color: #fff;
 }
@@ -39,15 +41,15 @@
 //	Panels
 //-----------------------------------
 
-.fr-tabs--is-ready .fr-tabs__panel {
+.fr-tabsresp--is-ready .fr-tabsresp__panel {
 	background-color: $yellow;
 	padding: 1.25em;
 }
 
-.fr-tabs p a {
+.fr-tabsresp p a {
 	@include underline($dark-grey, $yellow, 1.05em, 2px);
 }
-.fr-tabs p a:hover,
-.fr-tabs p a:focus {
+.fr-tabsresp p a:hover,
+.fr-tabsresp p a:focus {
 	@include underline($red, $yellow, 1.05em, 2px);
 }
